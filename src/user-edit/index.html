@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>職員編集ページ</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <table id="tbl">
+      <tr>
+        <th>職員名</th>
+        <th>パスワード</th>
+        <th>削除</th>
+      </tr>
+    </table>
+
+    <div id="addform">
+      <label>名前<input type="text" id="formName" /></label>
+      <label>職員番号<input type="text" id="formNum" /></label>
+
+      <button>
+        <p>職員の追加</p>
+        <span class="material-symbols-outlined"> person_add</span>
+      </button>
+    </div>
+
+    <script type="module" src="user-edit.ts"></script>
+  </body>
+</html>

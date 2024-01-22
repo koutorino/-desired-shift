@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>名前確認画面</title>
+  </head>
+  <body>
+    <h1>12月希望シフト</h1>
+
+    <div class="form">
+      <div class="user-form">
+        <div class="name">
+          <p>名前</p>
+          <select id="search-id" class="input">
+            <option>---名前を選択してください---</option>
+          </select>
+        </div>
+
+        <label class="pass">
+          <p>パスワード</p>
+          <input
+            id="search-password"
+            class="input"
+            type="number"
+            placeholder="番号を入力してください"
+            size="18"
+          />
+        </label>
+        <p id="search-result"></p>
+      </div>
+    </div>
+
+    <button class="log">ログイン</button>
+
+    <div class="admin">
+      <button class="ed" id="edit">職員編集</button>
+      <button id="result">提出確認</button>
+    </div>
+
+    <script type="module" src="main-form.ts"></script>
+  </body>
+</html>

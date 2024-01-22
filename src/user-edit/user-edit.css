@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin: 24px auto;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th {
+  height: 40px;
+  border: 1px solid black;
+}
+
+td {
+  height: 40px;
+  border: 1px solid black;
+}
+
+td.main-icon {
+  border-right: none;
+}
+
+td.name {
+  border-left: none;
+  text-align: left;
+}
+
+span.icon {
+  margin: 0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#addform {
+  background: rgb(221, 216, 216);
+  padding: 16px;
+  text-align: center;
+}
+
+#addform label {
+  margin: 16px;
+}
+
+button > p {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+button > span {
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+#addform button {
+  display: block;
+  margin: 16px auto 0;
+}
