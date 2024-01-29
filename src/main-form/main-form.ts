@@ -21,13 +21,12 @@ function findUser(searchId: string, searchPassword: number) {
 
   // データがなければ、「該当者なし」と表示して終了
   if (!targetData || objectName === undefined) {
-    searchResult.textContent = "IDまたはパスワードが違います";
+    searchResult.textContent = "名前または職員番号が違います";
     return;
   }
 
   // 該当データの名前を表示する
   searchResult.textContent = "ログインしました。";
-  // localStorage.setItem('name', searchId);
 
   // シフトデータに移動
   const url = new URL("../input-form/index.html", location.href);
@@ -49,8 +48,7 @@ document.querySelector(".log")?.addEventListener("click", () => {
   findUser(searchId, searchPassword);
 });
 
-// 登録ID,パスワード
-
+// 名前,職員番号
 const users = getUsers();
 
 if (users == null) {

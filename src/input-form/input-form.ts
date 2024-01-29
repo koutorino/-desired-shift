@@ -8,11 +8,11 @@ import { type UserData, getUsers, setUsers } from "../storage";
 const url = new URL(window.location.href);
 const addParam = url.searchParams.get("id");
 const users = getUsers();
-if (users == null) {
+const user = users?.find((data) => data.id === addParam);
+if (user == null) {
   alert("入力がありません。ユーザー登録を先に済ませてください。");
   window.open("../user-edit/index.html");
 }
-const gest = users?.find((data) => data.id === addParam);
 
 // 要素の取得
 function renderElement(num: number) {
@@ -188,7 +188,7 @@ function saveShifts() {
 
   const saveUsers: UserData[] =
     users?.map((obj) => {
-      if (obj.name === gest?.name) {
+      if (obj.name === user?.name) {
         return { ...obj, shift: shifts as string[] };
       }
       return obj;
@@ -230,7 +230,7 @@ function errorCheck() {
 // 「ようこそ●●さん！！」
 const helloNameElement = document.querySelector<HTMLElement>("#helloName");
 if (helloNameElement !== null) {
-  helloNameElement.textContent = "ようこそ" + gest?.name + "さん！！";
+  helloNameElement.textContent = "ようこそ" + user?.name + "さん！！";
 }
 
 // 当月の最終日を取得する
