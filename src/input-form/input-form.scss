@@ -130,7 +130,7 @@ body {
   width: 100%;
   padding: 0;
   display: inline-block;
-  font-size: 90%;
+  @include mq;
   color: red;
   box-sizing: border-box;
 }
