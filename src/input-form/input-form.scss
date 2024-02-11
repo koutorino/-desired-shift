@@ -1,3 +1,5 @@
+$keyColor: rgb(101 207 31);
+
 body {
   text-align: center;
 }
@@ -16,8 +18,8 @@ body {
 
 .result {
   flex: 1;
-  background: yellowgreen;
-  border: 4px, solid, greenyellow;
+  background: $keyColor;
+  border: 4px, solid, $keyColor;
   border-radius: 16px 0 0 16px;
   text-align: center;
   font-size: 32px;
@@ -96,13 +98,4 @@ body {
   box-sizing: border-box;
 }
 
-.errorColor {
-  flex: 1;
-  background: rgb(255, 119, 119);
-  border: 4px, solid, rgb(255, 119, 119);
-  border-radius: 16px 0 0 16px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: black;
-}
+

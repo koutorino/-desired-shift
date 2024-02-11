@@ -1,3 +1,5 @@
+$keyColor: rgb(101 207 31);
+
 body {
   text-align: center;
 }
@@ -13,6 +15,7 @@ table {
 th {
   height: 40px;
   border: 1px solid black;
+  background: $keyColor;
 }
 
 td {

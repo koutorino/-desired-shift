@@ -1,6 +1,8 @@
+$keyColor: rgb(101 207 31);
+
 html {
   background: linear-gradient(to bottom, #3e7eff, #94d6ff);
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -59,7 +61,7 @@ div.form {
 .log {
   font-size: 24px;
   all: unset;
-  background: rgb(106, 220, 86);
+  background: $keyColor;
   width: 384px;
   margin: 0 auto;
   padding: 24px;
