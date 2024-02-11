@@ -20,28 +20,28 @@
 
 ## 機能一覧
 
-| トップ画面                                                   | ログイン画面                                                     |
-| ------------------------------------------------------------ | ---------------------------------------------------------------- |
-| ![メイン画面](./screenshot/main-form.png)                    | ![希望シフト記入画面](./screenshot/input-form.png)               |
+| トップ画面                                             | ログイン画面                                                     |
+| ------------------------------------------------------ | ---------------------------------------------------------------- |
+| ![メイン画面](./screenshot/main-form.png)              | ![希望シフト記入画面](./screenshot/input-form.png)               |
 | 名前と職員番号での突き合わせを実装したログインフォーム | スライダーを用いた直感的な時間指定とワンクリックで選択できる時間 |
-| ![ユーザー編集画面](./screenshot/user-edit.png)              | ![希望シフト結果の表示](./screenshot/result.png)                 |
-| 職員の名前と職員番号を登録・削除する           | 全体の希望シフトが一目でわかる表で表示、Excelデータの出力        |
+| ![ユーザー編集画面](./screenshot/user-edit.png)        | ![希望シフト結果の表示](./screenshot/result.png)                 |
+| 職員の名前と職員番号を登録・削除する                   | 全体の希望シフトが一目でわかる表で表示、Excelデータの出力        |
 
 ## 使用技術
 
-| カテゴリー | 使用技術                                     |
-| ---------- | -------------------------------------------- |
-| main-form  | typescript, vite, HTML/CSS                   |
-| input-form | typescript, vite, HTML/CSS, noUiSlider       |
-| user-edit  | typescript, vite, HTML/CSS                   |
-| user-edit  | typescript, vite, HTML/CSS, file-saver, xlsx |
-| etc.       | prettier, eslint, Git, Github, node.js       |
+| カテゴリー | 使用技術                                       |
+| ---------- | ---------------------------------------------- |
+| main-form  | typescript, vite, HTML, Sass                   |
+| input-form | typescript, vite, HTML, Sass, noUiSlider       |
+| user-edit  | typescript, vite, HTML, Sass                   |
+| user-edit  | typescript, vite, HTML, Sass, file-saver, xlsx |
+| etc.       | prettier, eslint, Git, Github, node.js         |
 
 ## 今後のアップグレード
 
 - ソフト内で完結する月ごとのシフト管理表</br>
- 現在はプログラムにある数値を操作して、月を変化してるので、アプリ内で完結するようにする。
+  現在はプログラムにある数値を操作して、月を変化してるので、アプリ内で完結するようにする。
 - カスタム時間指定の作成</br>
- 現在は終日・休日・有給しか選べませんが、個人がよく使う時間を指定して、すぐにシフトに表示できるようにする。
+  現在は終日・休日・有給しか選べませんが、個人がよく使う時間を指定して、すぐにシフトに表示できるようにする。
 - デザイン性の向上</br>
- デザインをより、ユーザーインターフェースを意識した、扱いやすいデザインにする。
+  デザインをより、ユーザーインターフェースを意識した、扱いやすいデザインにする。
