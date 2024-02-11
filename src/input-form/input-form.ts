@@ -59,19 +59,19 @@ function renderElement(num: number) {
   const inputShu = document.createElement("input");
   const shuText = document.createElement("span");
   inputShu.setAttribute("type", "radio");
-  inputShu.setAttribute("name", "sel");
+  inputShu.setAttribute("name", `chek1-${num}`);
   inputShu.className = `chek1-${num}`;
   shuText.textContent = "終日";
   const inputOff = document.createElement("input");
   const offText = document.createElement("span");
   inputOff.setAttribute("type", "radio");
-  inputOff.setAttribute("name", "sel");
+  inputOff.setAttribute("name", `chek1-${num}`);
   inputOff.className = `chek2-${num}`;
   offText.textContent = "休み";
   const inputYuky = document.createElement("input");
   const yukyText = document.createElement("span");
   inputYuky.setAttribute("type", "radio");
-  inputYuky.setAttribute("name", "sel");
+  inputYuky.setAttribute("name", `chek1-${num}`);
   inputYuky.className = `chek3-${num}`;
   yukyText.textContent = "有給";
 
