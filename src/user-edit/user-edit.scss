@@ -18,15 +18,15 @@ th {
 td {
   height: 40px;
   border: 1px solid black;
-}
 
-td.main-icon {
-  border-right: none;
-}
+  &.main-icon {
+    border-right: none;
+  }
 
-td.name {
-  border-left: none;
-  text-align: left;
+  &.name {
+    border-left: none;
+    text-align: left;
+  }
 }
 
 span.icon {
@@ -39,20 +39,22 @@ span.icon {
   background: rgb(221, 216, 216);
   padding: 16px;
   text-align: center;
+
+  label {
+    margin: 16px;
+  }
 }
 
-#addform label {
-  margin: 16px;
-}
+button > {
+  p {
+    display: inline-block;
+    margin-right: 16px;
+  }
 
-button > p {
-  display: inline-block;
-  margin-right: 16px;
-}
-
-button > span {
-  line-height: 40px;
-  vertical-align: middle;
+  span {
+    line-height: 40px;
+    vertical-align: middle;
+  }
 }
 
 #addform button {

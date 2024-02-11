@@ -3,7 +3,7 @@ import noUiSlider, {
   type target as noUiSliderTarget,
 } from "noUiSlider";
 import "./input-form.scss";
-import "../../node_modules/noUiSlider/dist/nouislider.min.scss";
+import "../../node_modules/noUiSlider/dist/nouislider.min.css";
 import { type UserData, getUsers, setUsers } from "../storage";
 const url = new URL(window.location.href);
 const addParam = url.searchParams.get("id");
@@ -243,8 +243,8 @@ for (let i = 1; i <= lastDate; i++) {
 
 // 【登録】でオブジェクトの作成・保存
 document.querySelector("#register")?.addEventListener("click", () => {
-  errorCheck();
-  if (errorCheck() === "retrai") {
+  const check = errorCheck();
+  if (check === "retrai") {
     return;
   }
   alert("データが保存されました。");
