@@ -36,6 +36,7 @@ function renderElement(num: number) {
   const value = document.createElement("div");
   value.setAttribute("id", `sliderValue${num}`);
   value.setAttribute("class", "required");
+  value.setAttribute("class", "fontSize");
   console.log(value);
 
   // radioとスライダーをまとめたところ

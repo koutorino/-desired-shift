@@ -1,4 +1,13 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1020px;
 $keyColor: rgb(101 207 31);
+
+@mixin mq($bp) {
+  @media (min-width: ($bp)) {
+    @content;
+  }
+}
 
 body {
   text-align: center;
@@ -22,9 +31,31 @@ body {
   border: 4px, solid, $keyColor;
   border-radius: 16px 0 0 16px;
   text-align: center;
-  font-size: 32px;
   font-weight: bold;
   color: black;
+  & p {
+    @include mq($sm) {
+      font-size: 1.5rem;
+    }
+    @include mq($md) {
+      font-size: 2rem;
+    }
+    @include mq($lg) {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.fontSize {
+  @include mq($sm) {
+    font-size: 1.5rem;
+  }
+  @include mq($md) {
+    font-size: 2rem;
+  }
+  @include mq($lg) {
+    font-size: 2.5rem;
+  }
 }
 
 .form {
@@ -97,5 +128,3 @@ body {
   color: red;
   box-sizing: border-box;
 }
-
-
