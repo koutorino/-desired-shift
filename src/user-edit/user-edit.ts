@@ -1,5 +1,5 @@
 import { getUsers, setUsers } from "../storage";
-import "./user-edit.css";
+import "./user-edit.scss";
 
 const btn = document.querySelector("button");
 const table = document.querySelector("table");

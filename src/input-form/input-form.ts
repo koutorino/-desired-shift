@@ -2,8 +2,8 @@ import noUiSlider, {
   PipsMode,
   type target as noUiSliderTarget,
 } from "noUiSlider";
-import "./input-form.css";
-import "../../node_modules/noUiSlider/dist/nouislider.min.css";
+import "./input-form.scss";
+import "../../node_modules/noUiSlider/dist/nouislider.min.scss";
 import { type UserData, getUsers, setUsers } from "../storage";
 const url = new URL(window.location.href);
 const addParam = url.searchParams.get("id");
