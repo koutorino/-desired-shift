@@ -7,36 +7,39 @@
     <title>名前確認画面</title>
   </head>
   <body>
-    <h1>12月希望シフト</h1>
+    <div class="contaniner">
+      <h1>12月希望シフト</h1>
+      <div class="form">
+        <div class="user-form">
+          <div class="name">
+            <p>名前</p>
+            <select id="search-id" class="input">
+              <option>---名前を選択してください---</option>
+            </select>
+          </div>
 
-    <div class="form">
-      <div class="user-form">
-        <div class="name">
-          <p>名前</p>
-          <select id="search-id" class="input">
-            <option>---名前を選択してください---</option>
-          </select>
+          <div class="number">
+            <label class="pass">
+              <p>職員番号</p>
+              <input
+                id="search-password"
+                class="input"
+                type="number"
+                placeholder="番号を入力してください"
+                size="24"
+              />
+            </label>
+          </div>
+          <p id="search-result"></p>
         </div>
-
-        <label class="pass">
-          <p>職員番号</p>
-          <input
-            id="search-password"
-            class="input"
-            type="number"
-            placeholder="番号を入力してください"
-            size="18"
-          />
-        </label>
-        <p id="search-result"></p>
       </div>
-    </div>
 
-    <button class="log">ログイン</button>
+      <button class="log">ログイン</button>
 
-    <div class="admin">
-      <button class="ed" id="edit">職員編集</button>
-      <button id="result">提出確認</button>
+      <div class="admin">
+        <button id="edit" class="ed">職員編集</button>
+        <button id="result" class="result">提出確認</button>
+      </div>
     </div>
 
     <script type="module" src="main-form.ts"></script>

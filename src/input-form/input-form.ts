@@ -22,6 +22,9 @@ function renderElement(num: number) {
   const mainForm = document.createElement("div");
   mainForm.className = "main-form";
 
+  const time = document.createElement("div");
+  time.className = "time-box";
+
   // 日付と時間の表示
   const result = document.createElement("div");
   result.className = "result";
@@ -81,8 +84,9 @@ function renderElement(num: number) {
   // 全体の要素を追加する
   body?.appendChild(mainForm);
   mainForm.appendChild(result);
-  result.appendChild(date);
-  result.appendChild(value);
+  result.appendChild(time);
+  time.appendChild(date);
+  time.appendChild(value);
   mainForm.appendChild(form);
   form.appendChild(rad);
   rad.appendChild(label1);

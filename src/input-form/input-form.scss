@@ -1,11 +1,14 @@
-$sm: 640px;
-$md: 768px;
-$lg: 1020px;
 $keyColor: rgb(101 207 31);
 
-@mixin mq($bp) {
-  @media (min-width: ($bp)) {
-    @content;
+@mixin mq {
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1020px) {
+    font-size: 2.5rem;
   }
 }
 
@@ -16,26 +19,19 @@ body {
 #helloName {
   text-align: center;
   font-size: 1rem;
-  @include mq($sm) {
-    font-size: 1.5rem;
-  }
-  @include mq($md) {
-    font-size: 2rem;
-  }
-  @include mq($lg) {
-    font-size: 2.5rem;
-  }
+  @include mq;
 }
 
 .main-form {
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
   margin: 16px auto;
 }
 
 .result {
   flex: 1;
+  display: flex;
   background: $keyColor;
   border: 4px, solid, $keyColor;
   border-radius: 16px 0 0 16px;
@@ -43,34 +39,24 @@ body {
   font-weight: bold;
   color: black;
   & p {
-    font-size: 1rem;
-    @include mq($sm) {
-      font-size: 1.5rem;
-    }
-    @include mq($md) {
-      font-size: 2rem;
-    }
-    @include mq($lg) {
-      font-size: 2.5rem;
-    }
+    margin: 0 0 40px 0;
+    @include mq;
   }
+}
+
+.time-box {
+  flex: 1;
+  margin: auto;
 }
 
 .fontSize {
   font-size: 1rem;
-  @include mq($sm) {
-    font-size: 1.5rem;
-  }
-  @include mq($md) {
-    font-size: 2rem;
-  }
-  @include mq($lg) {
-    font-size: 2.5rem;
-  }
+  @include mq;
 }
 
 .form {
   flex: 1;
+  height: auto;
   border: 1px solid black;
   border-radius: 0 16px 16px 0;
 }
@@ -82,23 +68,21 @@ body {
   margin: 10px;
   font-size: 0.5rem;
   & span {
-    @include mq($sm) {
-      font-size: 1.5rem;
-    }
-    @include mq($md) {
-      font-size: 2rem;
-    }
-    @include mq($lg) {
-      font-size: 2.5rem;
-    }
+    @include mq;
   }
 }
 
 .container {
   max-width: auto;
   height: 60px;
-  margin: 60px auto;
-  padding: 0 50px;
+  margin: 60px auto 30px;
+  padding: 0 30px;
+  @media (min-width: 640px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1020px) {
+    padding: 0 90px;
+  }
 }
 
 .noUi-horizontal .noUi-handle {
