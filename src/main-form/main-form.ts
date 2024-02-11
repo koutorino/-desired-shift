@@ -1,7 +1,7 @@
 "use strict";
 
 import { type UserData, getUsers } from "../storage";
-import "./main-form.css";
+import "./main-form.scss";
 const userDataList: UserData[] = [];
 
 // ユーザー検索

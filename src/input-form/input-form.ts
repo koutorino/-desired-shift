@@ -2,7 +2,7 @@ import noUiSlider, {
   PipsMode,
   type target as noUiSliderTarget,
 } from "noUiSlider";
-import "./input-form.css";
+import "./input-form.scss";
 import "../../node_modules/noUiSlider/dist/nouislider.min.css";
 import { type UserData, getUsers, setUsers } from "../storage";
 const url = new URL(window.location.href);
@@ -22,6 +22,9 @@ function renderElement(num: number) {
   const mainForm = document.createElement("div");
   mainForm.className = "main-form";
 
+  const time = document.createElement("div");
+  time.className = "time-box";
+
   // 日付と時間の表示
   const result = document.createElement("div");
   result.className = "result";
@@ -36,6 +39,7 @@ function renderElement(num: number) {
   const value = document.createElement("div");
   value.setAttribute("id", `sliderValue${num}`);
   value.setAttribute("class", "required");
+  value.setAttribute("class", "fontSize");
   console.log(value);
 
   // radioとスライダーをまとめたところ
@@ -80,8 +84,9 @@ function renderElement(num: number) {
   // 全体の要素を追加する
   body?.appendChild(mainForm);
   mainForm.appendChild(result);
-  result.appendChild(date);
-  result.appendChild(value);
+  result.appendChild(time);
+  time.appendChild(date);
+  time.appendChild(value);
   mainForm.appendChild(form);
   form.appendChild(rad);
   rad.appendChild(label1);
@@ -243,8 +248,8 @@ for (let i = 1; i <= lastDate; i++) {
 
 // 【登録】でオブジェクトの作成・保存
 document.querySelector("#register")?.addEventListener("click", () => {
-  errorCheck();
-  if (errorCheck() === "retrai") {
+  const check = errorCheck();
+  if (check === "retrai") {
     return;
   }
   alert("データが保存されました。");

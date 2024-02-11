@@ -1,5 +1,5 @@
 import { getUsers } from "../storage";
-import "./result.css";
+import "./result.scss";
 import { sheetToExcell } from "./mainExcell.ts";
 export const array: unknown[][] = [];
 

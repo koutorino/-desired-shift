@@ -1,4 +1,16 @@
-@charset "utf-8";
+$keyColor: rgb(101 207 31);
+
+@mixin mq {
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1020px) {
+    font-size: 2.5rem;
+  }
+}
 
 body {
   text-align: center;
@@ -6,29 +18,45 @@ body {
 
 #helloName {
   text-align: center;
-  font-size: 32px;
+  font-size: 1rem;
+  @include mq;
 }
 
 .main-form {
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
   margin: 16px auto;
 }
 
 .result {
   flex: 1;
-  background: yellowgreen;
-  border: 4px, solid, greenyellow;
+  display: flex;
+  background: $keyColor;
+  border: 4px, solid, $keyColor;
   border-radius: 16px 0 0 16px;
   text-align: center;
-  font-size: 32px;
   font-weight: bold;
   color: black;
+  & p {
+    margin: 0 0 40px 0;
+    @include mq;
+  }
+}
+
+.time-box {
+  flex: 1;
+  margin: auto;
+}
+
+.fontSize {
+  font-size: 1rem;
+  @include mq;
 }
 
 .form {
   flex: 1;
+  height: auto;
   border: 1px solid black;
   border-radius: 0 16px 16px 0;
 }
@@ -37,15 +65,24 @@ body {
   display: flex;
   gap: 24px;
   justify-content: center;
-  font-size: 15px;
-  margin: 16px;
+  margin: 10px;
+  font-size: 0.5rem;
+  & span {
+    @include mq;
+  }
 }
 
 .container {
   max-width: auto;
   height: 60px;
-  margin: 60px auto;
-  padding: 0 50px;
+  margin: 60px auto 30px;
+  padding: 0 30px;
+  @media (min-width: 640px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1020px) {
+    padding: 0 90px;
+  }
 }
 
 .noUi-horizontal .noUi-handle {
@@ -77,19 +114,16 @@ body {
   color: #212529;
   border-radius: 0.5rem;
   width: 250px;
-}
-
-#register {
   border: 2px solid #000;
   border-radius: 0;
   background: #fff;
   -webkit-box-shadow: 4px 4px 0 #000;
   box-shadow: 4px 4px 0 #000;
-}
 
-#register:hover {
-  -webkit-box-shadow: -4px -4px 0 #000;
-  box-shadow: -4px -4px 0 #000;
+  &:hover {
+    -webkit-box-shadow: -4px -4px 0 #000;
+    box-shadow: -4px -4px 0 #000;
+  }
 }
 
 .error {
@@ -99,15 +133,4 @@ body {
   font-size: 90%;
   color: red;
   box-sizing: border-box;
-}
-
-.errorColor {
-  flex: 1;
-  background: rgb(255, 119, 119);
-  border: 4px, solid, rgb(255, 119, 119);
-  border-radius: 16px 0 0 16px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  color: black;
 }

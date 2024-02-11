@@ -1,0 +1,60 @@
+$keyColor: rgb(101 207 31);
+
+body {
+  text-align: center;
+}
+
+.scroll {
+  width: 90%;
+  margin: 16px auto;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 1em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  table-layout: fixed;
+  min-width: 100%;
+}
+
+th {
+  width: 200px;
+  min-width: 200px;
+}
+
+td {
+  width: 130px;
+  min-width: 130px;
+}
+
+table {
+  thead tr {
+    background: $keyColor;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #ffffff9e;
+    transition: 0.8s all ease;
+    text-align: center;
+
+    &:nth-of-type(even) {
+      background: #ffffff9e;
+    }
+
+    &:last-of-type {
+      border-bottom: 2px solid #005498;
+    }
+
+    &:hover {
+      font-weight: bold;
+      color: #005498;
+    }
+  }
+}

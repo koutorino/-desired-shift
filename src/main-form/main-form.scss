@@ -1,0 +1,75 @@
+$keyColor: rgb(101 207 31);
+
+@mixin mq {
+  @media (min-width: 640px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1020px) {
+    font-size: 2.5rem;
+  }
+}
+
+body {
+  font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+  background: linear-gradient(to bottom, #3e7eff, #94d6ff);
+  height: 100vh;
+  display: flex;
+  @include mq;
+}
+
+h1 {
+  color: white;
+}
+
+.contaniner {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.form {
+  margin-top: 50px;
+  width: auto;
+  padding: 24px;
+  background: white;
+  border-radius: 4px 4px 0 0;
+}
+
+.name {
+  & .input {
+    @include mq;
+  }
+}
+
+.number {
+  margin-top: 50px;
+  & input {
+    @include mq;
+  }
+}
+
+.log {
+  all: unset;
+  cursor: pointer;
+  background: $keyColor;
+  width: 100%;
+  height: 70px;
+}
+
+.admin {
+  margin-top: 30px;
+}
+
+.ed,
+.result {
+  font-size: 16px;
+  letter-spacing: 8px;
+  text-align: center;
+  cursor: pointer;
+  background: rgb(206, 202, 202);
+  margin: 24px;
+  padding: 16px 16px 16px 24px;
+}
